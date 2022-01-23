@@ -1,6 +1,6 @@
 import React from 'react';
 import './Square.css';
-import barracks from '../images/barracks.png';
+// import barracks from '../images/barracks.png';
 
 export class Square extends React.Component {
 
@@ -12,10 +12,11 @@ export class Square extends React.Component {
         return (
             <div className='building'>
                 <img className='image'
-                    src={barracks} 
+                    // src={barracks} 
+                    src="../images/barracks.png"
                     alt="Barracks" 
                 />
-                <p>Barracks</p>
+                <div className='label'>Barracks</div>
             </div>
         )
     }

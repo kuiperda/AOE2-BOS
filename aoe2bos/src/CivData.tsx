@@ -1,9 +1,10 @@
 
 class CivData {
+    civs: Array<any> = [];
     CivData() {
         this.civs = [
             {
-                name: DefaultAllTechs,
+                name: 'DefaultAllTechs',
                 squares: 
                 [
                     {
