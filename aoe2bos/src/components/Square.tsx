@@ -4,10 +4,6 @@ import './Square.css';
 
 export class Square extends React.Component {
 
-    Square() {
-        
-    }
-
     render() {
         return (
             <div className='building'>
