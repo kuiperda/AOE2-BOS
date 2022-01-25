@@ -1,0 +1,10 @@
+.civs-view {
+    width: 50vw;
+    height: 50vh;
+    margin-left: 25vw;
+    margin-top: 20px;
+    background-color: rgba(245, 245, 245, 0.5);
+    border: 10px solid rgba(245, 245, 245, 0.75);
+    border-radius: 20px;
+}
+

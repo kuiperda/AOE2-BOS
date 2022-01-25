@@ -9,6 +9,9 @@
                     "imgSrc": "./images/barracks.png'"
                 }
             ]
+        },
+        {
+            "name": "AztecsEmpty"
         }
     ]
 }
