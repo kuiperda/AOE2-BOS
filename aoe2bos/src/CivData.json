@@ -1,10 +1,12 @@
 {
     "civs": [
         {
-            "name": "DefaultAllTechs"
+            "name": "DefaultAllTechs",
+            "logo": "defaultAllTechsLogo.jpeg"
         },
         {
-            "name": "AztecsEmpty"
+            "name": "AztecsEmpty",
+            "logo": "aztecsLogo.png"
         }
     ]
 }

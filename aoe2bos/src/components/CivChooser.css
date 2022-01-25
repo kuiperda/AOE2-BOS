@@ -13,8 +13,14 @@
 }
 
 .civ-icon {
-    display: inline;
+    display: inline-block;
     margin: 1%;
     background-color: red;
     cursor: pointer;
+}
+
+.civ-logo {
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
 }

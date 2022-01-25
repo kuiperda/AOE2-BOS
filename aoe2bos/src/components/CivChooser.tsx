@@ -32,7 +32,10 @@ export class CivChooser extends React.Component<CivChooserProps,CivChooserState>
                         <div className='civ-icon'
                             onClick={ () => this.handleCivIconClick(civ)}
                         >
-                            {civ.name}
+                            <img className="civ-logo"
+                                src={"/images/" + civ.logo} 
+                            />
+                            <div>{civ.name}</div>
                         </div>
                     )
                 })}
