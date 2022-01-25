@@ -1,14 +1,7 @@
 {
     "civs": [
         {
-            "name": "DefaultAllTechs",
-            "squares": [
-                {
-                    "name": "Barracks",
-                    "type": "building",
-                    "imgSrc": "./images/barracks.png'"
-                }
-            ]
+            "name": "DefaultAllTechs"
         },
         {
             "name": "AztecsEmpty"

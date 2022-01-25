@@ -18,7 +18,7 @@ export class BuilderPage extends React.Component<{}, BuilderPageState> {
         this.state = { 
             civ: "",
             pickingCiv: false
-    }
+        }
         this.handleClickChooseCiv = this.handleClickChooseCiv.bind(this);
         this.handleClickSelectCiv = this.handleClickSelectCiv.bind(this);
         this.handleClickCancelChoice = this.handleClickCancelChoice.bind(this);
@@ -26,29 +26,15 @@ export class BuilderPage extends React.Component<{}, BuilderPageState> {
 
     handleClickChooseCiv() {
         !this.state.pickingCiv && this.setState({pickingCiv: true});
-
-        // a div should pop up with all the civ choices
-        // user can click one and it will select that civ
-        // and start a new timeline for their build order,
-        // populating achieved and available squares.
-
-        // const newCiv = CivData.civs[1].name;
-        // this.setState({civ: newCiv});
-    }
-
-    handleClickSelectCiv() {
-        this.setState({civ: "Mongols", pickingCiv: false});
-        // make user have to highlight a civ for select to do anything.
-        // bring back to screen with civ changed.
-        // need to the repopulate state
     }
 
     handleClickCancelChoice() {
         this.state.pickingCiv && this.setState({pickingCiv: false});
     }
 
-    // before the civchooser, add stuff like 'dark age' ?
-    // put that in achievedView. put civ logo in header though
+    handleClickSelectCiv(civ: CivObject) {
+        this.setState({ civ: civ.name, pickingCiv: false});
+    }
 
     render() {
         return (
@@ -62,6 +48,7 @@ export class BuilderPage extends React.Component<{}, BuilderPageState> {
                     <CivChooser 
                         onClickCancelChoice={this.handleClickCancelChoice}
                         onClickSelectCiv={this.handleClickSelectCiv}
+                        civList = {CivData.civs}
                     />
                     </div>}
                 {!this.state.pickingCiv && <div className='page'>

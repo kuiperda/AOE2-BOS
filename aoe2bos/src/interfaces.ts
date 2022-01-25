@@ -1,0 +1,3 @@
+interface CivObject {
+    name: string
+}

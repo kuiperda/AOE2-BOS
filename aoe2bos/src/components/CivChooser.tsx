@@ -4,21 +4,48 @@ import './CivChooser.css'
 interface CivChooserProps {
     onClickCancelChoice: any,
     onClickSelectCiv: any
+    civList: Array<any>
 }
 
-export class CivChooser extends React.Component<CivChooserProps,{}> {
+interface CivChooserState {
+    currentSelectedCiv: CivObject | ""
+}
+
+export class CivChooser extends React.Component<CivChooserProps,CivChooserState> {
+    
+    constructor(props: any) {
+        super(props);
+        this.state = { currentSelectedCiv: "" };
+        this.handleCivIconClick = this.handleCivIconClick.bind(this);
+    }
+
+    handleCivIconClick(civ: CivObject) {
+        this.setState({ currentSelectedCiv : civ })
+    }
+    
     render() {
+
+        const civIcons = ( 
+            <div> 
+                {this.props.civList.map( civ => {
+                    return (
+                        <div className='civ-icon'
+                            onClick={ () => this.handleCivIconClick(civ)}
+                        >
+                            {civ.name}
+                        </div>
+                    )
+                })}
+            </div>
+        );
+
         return (
             <div>
                 <div className='civs-view'>
-                    {/* for eachciv in the civ json, 
-                    render an button of its logo that you can 
-                    highlight by clicking, then allow to choose 
-                    it via the select button. this brings back
-                    to the other page, as does cancel. */}
-            </div>
+                    {civIcons}
+                </div>
                 <div className='buttons-view'>
-                    <button onClick={this.props.onClickSelectCiv}>Select</button>
+                    {this.state.currentSelectedCiv && <button onClick={ () => this.props.onClickSelectCiv(this.state.currentSelectedCiv)}>Select</button>}
                     <button onClick={this.props.onClickCancelChoice}>Cancel</button>
                 </div>
             </div>
