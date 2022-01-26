@@ -1,13 +1,11 @@
 import React from 'react';
 import './BuilderPage.css';
-import { AchievedSquaresView } from './AchievedSquaresView';
 import { Timeline } from './Timeline';
-import { AvailableSquaresView } from './AvailableSquaresView';
 import { CivChooser } from './CivChooser';
 import CivData from '../CivData.json';
 
 interface BuilderPageState {
-    civ: string
+    civ: CivObject
     pickingCiv: boolean
 }
 
@@ -16,7 +14,7 @@ export class BuilderPage extends React.Component<{}, BuilderPageState> {
     constructor(props: any) {
         super(props);
         this.state = { 
-            civ: "",
+            civ: CivData.civs[0],
             pickingCiv: false
         }
         this.handleClickChooseCiv = this.handleClickChooseCiv.bind(this);
@@ -33,7 +31,7 @@ export class BuilderPage extends React.Component<{}, BuilderPageState> {
     }
 
     handleClickSelectCiv(civ: CivObject) {
-        this.setState({ civ: civ.name, pickingCiv: false});
+        this.setState({ civ: civ, pickingCiv: false});
     }
 
     render() {
@@ -41,8 +39,11 @@ export class BuilderPage extends React.Component<{}, BuilderPageState> {
             <div className="background">
                 <div className='header'>
                     {!this.state.pickingCiv && <button onClick={this.handleClickChooseCiv}>
-                        {this.state.civ || "Choose a Civ"}
+                        {"Create New"}
                     </button> }
+                    {!this.state.pickingCiv &&<div>
+                        {this.state.civ.name || "No Civ Selected"}
+                    </div> }
                 </div>
                 {this.state.pickingCiv && <div className='page'>
                     <CivChooser 
@@ -52,14 +53,8 @@ export class BuilderPage extends React.Component<{}, BuilderPageState> {
                     />
                     </div>}
                 {!this.state.pickingCiv && <div className='page'>
-                    <span className='left'>
-                        <AchievedSquaresView />
-                    </span>
                     <div className='center'>
                         <Timeline />
-                    </div>
-                    <div className='right'>
-                        <AvailableSquaresView />
                     </div>
                 </div>}
             </div>

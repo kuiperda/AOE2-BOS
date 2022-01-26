@@ -2,8 +2,286 @@
     "civs": [
         {
             "name": "DefaultAllTechs",
-            "logo": "defaultAllTechsLogo.jpeg"
+            "logo": "defaultAllTechsLogo.jpeg",
+
+            "buildings": [
+                {
+                    "name": "Town Center",
+                    "logo": "townCenter.png",
+                    "woodCost": 275,
+                    "stoneCost": 100,
+                    "buildTime": 150,
+                    "popSpace": 10,
+                    "produces": [
+                        "Villager",
+                        "Loom",
+                        "Feudal Age",
+                        "Castle Age",
+                        "Imperial Age",
+                        "Wheelbarrow",
+                        "Hand Cart",
+                        "Town Watch",
+                        "Town Patrol"
+                    ],
+                    "requires": [
+                        "Castle Age"
+                    ]
+                },
+                {
+                    "name": "House",
+                    "logo": "house.png",
+                    "woodCost": 25,
+                    "buildTime": 25,
+                    "popSpace": 5
+                },
+                {
+                    "name": "Lumber Camp",
+                    "logo": "lumberCamp.png",
+                    "woodCost": 100,
+                    "buildTime": 35,
+                    "produces": [
+                        "Double-Bit Axe",
+                        "Bow Saw",
+                        "Two-Man Saw"
+                    ]
+                },
+                {
+                    "name": "Mill",
+                    "logo": "mill.png",
+                    "woodCost": 100,
+                    "buildTime": 35,
+                    "produces": [
+                        "Horse Collar",
+                        "Heavy Plow",
+                        "Crop Rotation"
+                    ]
+                },
+                {
+                    "name": "Farm",
+                    "logo": "farm.png",
+                    "woodCost": 60,
+                    "buildTime": 15,
+                    "foodAmount": 175,
+                    "requires": [
+                        "Mill"
+                    ]
+                },
+                {
+                    "name": "Mining Camp",
+                    "logo": "miningCamp.png",
+                    "woodCost": 100,
+                    "buildTime": 35,
+                    "produces": [
+                        "Gold Mining",
+                        "Stone Mining",
+                        "Gold Shaft Mining",
+                        "Stone Shaft Mining"
+                    ]
+                },
+                {
+                    "name": "Barracks",
+                    "logo": "barracks.png",
+                    "woodCost": 175,
+                    "buildTime": 50,
+                    "produces": [
+                        "Militia",
+                        "Man-at-Arms",
+                        "Spearman",
+                        "Eagle Scout",
+                        "Supplies",
+                        "Long Swordsman",
+                        "Pikeman",
+                        "Eagle Warrior",
+                        "Squires",
+                        "Arson",
+                        "Two-Handed Swordsman",
+                        "Halberdier",
+                        "Elite Eagle Warrior",
+                        "Champion"
+                    ]
+                },
+                {
+                    "name": "Archery Range",
+                    "logo": "archeryRange.png",
+                    "woodCost": 175,
+                    "buildTime": 50,
+                    "produces": [
+                        "Archer",
+                        "Skirmisher",
+                        "Crossbowman",
+                        "Elite Skirmisher",
+                        "Cavalry Archer",
+                        "Thumb Ring",
+                        "Arbalester",
+                        "Hand Cannoneer",
+                        "Heavy Cavalry Archer",
+                        "Parthian Tactics"
+                    ],
+                    "requires" : [
+                        "Feudal Age",
+                        "Barracks"
+                    ]
+                },
+                {
+                    "name": "Stable",
+                    "logo": "stable.png",
+                    "woodCost": 175,
+                    "buildTime": 50,
+                    "produces": [
+                        "Scout Cavalry",
+                        "Bloodlines",
+                        "Light Cavalry",
+                        "Knight",
+                        "Camel Rider",
+                        "Battle Elephant",
+                        "Steppe Lancer",
+                        "Husbandry",
+                        "Hussar",
+                        "Cavalier",
+                        "Heavy Camel Rider",
+                        "Elite Battle Elephant",
+                        "Elite Steppe Lancer",
+                        "Paladin"
+                    ],
+                    "requires": [
+                        "Feudal Age",
+                        "Barracks"
+                    ]
+                },
+                {
+                    "name": "Blacksmith",
+                    "logo": "blacksmith.png",
+                    "woodCost": 150,
+                    "buildTime": 40,
+                    "produces": [
+                        "Forging",
+                        "Scale Mail Armor",
+                        "Scale Barding Armor",
+                        "Fletching",
+                        "Padded Archer Armor",
+                        "Iron Casting",
+                        "Chain Mail Armor",
+                        "Chain Barding Armor",
+                        "Bodkin Arrow",
+                        "Leather Archer Armor",
+                        "Blast Furnace",
+                        "Plate Mail Armor",
+                        "Plate Barding Armor",
+                        "Bracer",
+                        "Ring Archer Armor"
+                    ],
+                    "requires": [
+                        "Feudal Age"
+                    ]
+                },
+                {
+                    "name": "Monastery",
+                    "logo": "monastery.png",
+                    "woodCost": 175,
+                    "buildTime": 40,
+                    "produces": [
+                        "Monk",
+                        "Redemption",
+                        "Atonement",
+                        "Herbal Medicine",
+                        "Heresy",
+                        "Sanctity",
+                        "Fervor",
+                        "Faith",
+                        "Illumination",
+                        "Block Printing",
+                        "Theocracy"
+                    ],
+                    "requires": [
+                        "Castle Age"
+                    ]
+                },
+                {
+                    "name": "University",
+                    "logo": "university.png",
+                    "woodCost": 200,
+                    "buildTime": 60,
+                    "produces": [
+                        "Masonry",
+                        "Fortified Wall",
+                        "Ballistics",
+                        "Guard Tower",
+                        "Heated Shot",
+                        "Murder Holes",
+                        "Treadmill Crane",
+                        "Architecture",
+                        "Chemistry",
+                        "Siege Engineers",
+                        "Keep",
+                        "Arrowslits",
+                        "Bombard Tower"
+                    ],
+                    "requires": [
+                        "Castle Age"
+                    ]
+                },
+                {
+                    "name": "Siege Workshop",
+                    "logo": "siegeWorkshop.png",
+                    "woodCost": 200,
+                    "buildTime": 40,
+                    "produces": [
+                        "Battering Ram",
+                        "Mangonel",
+                        "Scorpion",
+                        "Siege Tower",
+                        "Capped Ram",
+                        "Onager",
+                        "Heavy Scorpion",
+                        "Bombard Cannon",
+                        "Siege Ram",
+                        "Siege Onager"
+                    ],
+                    "requires": [
+                        "Castle Age",
+                        "Blacksmith"
+                    ]
+                },
+                {
+                    "name": "Castle",
+                    "logo": "castle.png",
+                    "stoneCost": 650,
+                    "buildTime": 200,
+                    "popSpace": 20,
+                    "produces": [
+                        "Petard",
+                        "Trebuchet",
+                        "Hoardings",
+                        "Sappers",
+                        "Conscription",
+                        "Spies"
+                    ],
+                    "requires": [
+                        "Castle Age"
+                    ]
+                },
+                {
+                    "name": "Wonder",
+                    "logo": "wonder.png",
+                    "woodCost": 1000,
+                    "goldCost": 1000,
+                    "stoneCost": 1000,
+                    "buildTime": 3500,
+                    "requires": [
+                        "Imperial Age"
+                    ]
+                }
+            ],
+
+            "Units": [
+
+            ],
+
+            "Techs": [
+
+            ]
         },
+
         {
             "name": "AztecsEmpty",
             "logo": "aztecsLogo.png"
