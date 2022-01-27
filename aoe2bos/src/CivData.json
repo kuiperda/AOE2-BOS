@@ -4,8 +4,8 @@
             "name": "DefaultAllTechs",
             "logo": "defaultAllTechsLogo.jpeg",
 
-            "buildings": [
-                {
+            "buildings": {
+                "townCenter" : {
                     "name": "Town Center",
                     "logo": "townCenter.png",
                     "woodCost": 275,
@@ -27,14 +27,14 @@
                         "Castle Age"
                     ]
                 },
-                {
+                "house": {
                     "name": "House",
                     "logo": "house.png",
                     "woodCost": 25,
                     "buildTime": 25,
                     "popSpace": 5
                 },
-                {
+                "lumberCamp": {
                     "name": "Lumber Camp",
                     "logo": "lumberCamp.png",
                     "woodCost": 100,
@@ -45,7 +45,7 @@
                         "Two-Man Saw"
                     ]
                 },
-                {
+                "mill": {
                     "name": "Mill",
                     "logo": "mill.png",
                     "woodCost": 100,
@@ -56,7 +56,7 @@
                         "Crop Rotation"
                     ]
                 },
-                {
+                "farm": {
                     "name": "Farm",
                     "logo": "farm.png",
                     "woodCost": 60,
@@ -66,7 +66,7 @@
                         "Mill"
                     ]
                 },
-                {
+                "miningCamp": {
                     "name": "Mining Camp",
                     "logo": "miningCamp.png",
                     "woodCost": 100,
@@ -78,7 +78,7 @@
                         "Stone Shaft Mining"
                     ]
                 },
-                {
+                "barracks": {
                     "name": "Barracks",
                     "logo": "barracks.png",
                     "woodCost": 175,
@@ -100,7 +100,7 @@
                         "Champion"
                     ]
                 },
-                {
+                "archeryRange": {
                     "name": "Archery Range",
                     "logo": "archeryRange.png",
                     "woodCost": 175,
@@ -122,7 +122,7 @@
                         "Barracks"
                     ]
                 },
-                {
+                "stable": {
                     "name": "Stable",
                     "logo": "stable.png",
                     "woodCost": 175,
@@ -148,7 +148,7 @@
                         "Barracks"
                     ]
                 },
-                {
+                "blacksmith": {
                     "name": "Blacksmith",
                     "logo": "blacksmith.png",
                     "woodCost": 150,
@@ -174,7 +174,7 @@
                         "Feudal Age"
                     ]
                 },
-                {
+                "monastery": {
                     "name": "Monastery",
                     "logo": "monastery.png",
                     "woodCost": 175,
@@ -196,7 +196,7 @@
                         "Castle Age"
                     ]
                 },
-                {
+                "university": {
                     "name": "University",
                     "logo": "university.png",
                     "woodCost": 200,
@@ -220,7 +220,7 @@
                         "Castle Age"
                     ]
                 },
-                {
+                "siegeWorkshop": {
                     "name": "Siege Workshop",
                     "logo": "siegeWorkshop.png",
                     "woodCost": 200,
@@ -242,7 +242,7 @@
                         "Blacksmith"
                     ]
                 },
-                {
+                "castle": {
                     "name": "Castle",
                     "logo": "castle.png",
                     "stoneCost": 650,
@@ -260,7 +260,7 @@
                         "Castle Age"
                     ]
                 },
-                {
+                "wonder": {
                     "name": "Wonder",
                     "logo": "wonder.png",
                     "woodCost": 1000,
@@ -271,20 +271,16 @@
                         "Imperial Age"
                     ]
                 }
-            ],
+            },
 
-            "Units": [
+            "units": {
 
-            ],
+            },
 
-            "Techs": [
+            "techs": {
 
-            ]
-        },
-
-        {
-            "name": "AztecsEmpty",
-            "logo": "aztecsLogo.png"
+            }
         }
+        
     ]
 }

@@ -1,18 +1,32 @@
 import React from 'react';
 import './Square.css';
-// import barracks from '../images/barracks.png';
 
-export class Square extends React.Component {
+interface SquareProps {
+    content: BuildingObject
+}
+
+export class Square extends React.Component<SquareProps, {}> {
+
+    handleClickOnSquare() {
+        alert("got it");
+
+        const squareView = (
+            <div>
+                {/* pass */}
+            </div>
+        )
+    }
 
     render() {
         return (
-            <div className='building'>
+            <div className='square'
+                onClick={this.handleClickOnSquare}
+            >
                 <img className='image'
-                    // src={barracks} 
-                    src="../images/barracks.png"
-                    alt="Barracks" 
+                    src={"../images/" + this.props.content.logo}
+                    alt={this.props.content.name} 
                 />
-                <div className='label'>Barracks</div>
+                <div className='label'>{this.props.content.name}</div>
             </div>
         )
     }

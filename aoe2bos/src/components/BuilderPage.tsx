@@ -54,7 +54,7 @@ export class BuilderPage extends React.Component<{}, BuilderPageState> {
                     </div>}
                 {!this.state.pickingCiv && <div className='page'>
                     <div className='center'>
-                        <Timeline />
+                        <Timeline civ={this.state.civ} />
                     </div>
                 </div>}
             </div>
