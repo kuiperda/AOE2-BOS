@@ -1,3 +1,4 @@
+
 interface CivObject {
     name: string, //i.e. "Aztecs"
     logo: string, //name of image file. components handle the path. 
@@ -18,8 +19,19 @@ interface CivObject {
         castle: BuildingObject,
         wonder: BuildingObject
     },
-    units: Object,
-    techs: Object
+    techs: {
+        loom: TechObject,
+        wheelbarrow: TechObject,
+        handCart: TechObject,
+        townWatch: TechObject,
+        townPatrol: TechObject,
+        feudalAge: TechObject,
+        castleAge: TechObject,
+        imperialAge: TechObject
+    },
+    units: {
+        villager: UnitObject
+    }
 }
 
 interface BuildingObject {
@@ -36,9 +48,34 @@ interface BuildingObject {
 }
 
 interface UnitObject {
-
+    name: string,
+    logo: string, 
+    foodCost?: number,
+    woodCost?: number,
+    goldCost?: number,
+    trainTime: number,
+    builds?: Array<string>,
+    requires?: Array<string>
 }
 
 interface TechObject {
-    
+    name: string,
+    logo: string, 
+    foodCost?: number,
+    woodCost?: number,
+    goldCost?: number,
+    stoneCost?: number,
+    researchTime: number,
+    requires?: Array<string>
+}
+
+interface TimelineBuilding {
+    ref: BuildingObject, // references the JSON property for that BuildingObject
+    history: Array<TimelineBuildingTasks>
+}
+
+interface TimelineBuildingTasks {
+    time: number,
+    action: any,
+    queue: Array<any>
 }

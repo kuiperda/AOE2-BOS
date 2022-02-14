@@ -1,6 +1,6 @@
 {
-    "civs": [
-        {
+    "civs": {
+        "defaultAllTechs": {
             "name": "DefaultAllTechs",
             "logo": "defaultAllTechsLogo.jpeg",
 
@@ -13,15 +13,15 @@
                     "buildTime": 150,
                     "popSpace": 10,
                     "produces": [
-                        "Villager",
-                        "Loom",
-                        "Feudal Age",
-                        "Castle Age",
-                        "Imperial Age",
-                        "Wheelbarrow",
-                        "Hand Cart",
-                        "Town Watch",
-                        "Town Patrol"
+                        "units/villager",
+                        "techs/loom",
+                        "techs/wheelbarrow",
+                        "techs/handCart",
+                        "techs/townWatch",
+                        "techs/townPatrol",
+                        "techs/feudalAge",
+                        "techs/castleAge",
+                        "techs/imperialAge"
                     ],
                     "requires": [
                         "Castle Age"
@@ -272,15 +272,93 @@
                     ]
                 }
             },
+            
+            "techs": {
+                "loom": {
+                    "name": "Loom",
+                    "logo": "loom.png",
+                    "foodCost": 50,
+                    "researchTime": 25
+                }, 
+                "wheelbarrow": {
+                    "name": "Wheelbarrow",
+                    "logo": "wheelbarrow.png",
+                    "foodCost": 175,
+                    "woodCost": 50,
+                    "researchTime": 75,
+                    "requires": [
+                        "Feudal Age"
+                    ]
+                }, 
+                "handCart": {
+                    "name": "Hand Cart",
+                    "logo": "handCart.png",
+                    "foodCost": 300,
+                    "woodCost": 200,
+                    "researchTime": 55,
+                    "requires": [
+                        "Wheelbarrow",
+                        "Castle Age"
+                    ]
+                }, 
+                "townWatch": {
+                    "name": "Town Watch",
+                    "logo": "townWatch.png",
+                    "foodCost": 75,
+                    "researchTime": 25,
+                    "requires": [
+                        "Feudal Age"
+                    ]
+                },
+                "townPatrol": {
+                    "name": "Town Patrol",
+                    "logo": "townPatrol.png",
+                    "foodCost": 300,
+                    "goldCost": 100,
+                    "researchTime": 40,
+                    "requires": [
+                        "Town Watch",
+                        "Castle Age"
+                    ]
 
-            "units": {
-
+                },
+                "feudalAge": {
+                    "name": "Feudal Age",
+                    "logo": "feudalAge.png",
+                    "foodCost": 500,
+                    "researchTime": 130
+                }, 
+                "castleAge": {
+                    "name": "Castle Age",
+                    "logo": "castleAge.png",
+                    "foodCost": 800,
+                    "goldCost": 200,
+                    "researchTime": 160,
+                    "requires": [
+                        "Feudal Age"
+                    ]
+                }, 
+                "imperialAge": {
+                    "name": "Imperial Age",
+                    "logo": "imperialAge.png",
+                    "foodCost": 1000,
+                    "goldCost": 800,
+                    "researchTime": 190,
+                    "requires": [
+                        "Castle Age"
+                    ]
+                }
             },
 
-            "techs": {
-
+            "units": {
+                "villager": {
+                    "name": "Villager",
+                    "logo": "villager.png",
+                    "foodCost": 50,
+                    "trainTime": 25,
+                    "builds": []
+                }
             }
         }
-        
-    ]
+    }
 }

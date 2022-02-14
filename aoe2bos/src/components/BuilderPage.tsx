@@ -14,7 +14,7 @@ export class BuilderPage extends React.Component<{}, BuilderPageState> {
     constructor(props: any) {
         super(props);
         this.state = { 
-            civ: CivData.civs[0],
+            civ: CivData.civs.defaultAllTechs,
             pickingCiv: false
         }
         this.handleClickChooseCiv = this.handleClickChooseCiv.bind(this);
@@ -49,7 +49,7 @@ export class BuilderPage extends React.Component<{}, BuilderPageState> {
                     <CivChooser 
                         onClickCancelChoice={this.handleClickCancelChoice}
                         onClickSelectCiv={this.handleClickSelectCiv}
-                        civList = {CivData.civs}
+                        civList = {Object.values(CivData.civs)}
                     />
                     </div>}
                 {!this.state.pickingCiv && <div className='page'>
